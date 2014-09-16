@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+	<title>Frey Lucas</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="styles.css" media="all">
+	<link rel="icon" type="image/ico"  href="favicon.ico">
+	</head>
+	<body id="body">
+	<span id="label" class="slide">< Makara Beach, NZ</span>
+		<div class="container">
+			<div class="lang">FRANCAIS</div>
+
+			<div class="logo"><span>lf</span></div>
+			<h1>I develop web experience</h1>
+			<h2>In <a class="link" href="https://www.google.co.nz/maps/@-41.2443701,174.7618546,11z" target="_blank">Wellington</a>, NZ</h2>
+			<h3>for <a class="link" href="http://heyday.co.nz/" target="_blank">Heyday Ltd</a></h3>
+			<div class="media">
+				<ul>
+					<li><a class="mda-tw" target=_blank" href=""></a></li>
+					<li><a class="mda-lk" target=_blank" href="https://www.linkedin.com/profile/view?id=328210620"></a></li>
+					<li><a class="mda-em" target=_blank" href=""></a></li>
+					<li><a class="mda-sc" target=_blank" href="https://soundcloud.com/skyzofou"></a></li>
+					<li><a class="mda-gh" target=_blank" href="https://github.com/lucasfrey"></a></li>
+				</ul>
+			</div>
+
+			<div class="ftr">
+				<div class="ftr-container">
+						<span class="br-left">{</span>
+						<p>Amoureux de voyages et du web, apres mes etudes j'ai décidé de m'envoler pour la Nouvelle-Calédonie,
+							ou j'ai pu y apprecier la vie tropicale pendant 3 années. Puis j'ai repris la route, l'ile d'a cote,
+							apres un voyage en van me voila désormais developpeur d'interface, toujours en agence digitale.
+						</p>
+						<p>J'écrit sur mon blog defois, je fais un peu de photos (clic en haut a droite) et aime toujours autant la musique.</p>
+						<span class="br-right">}</span>
+				</div>
+			</div>
+		</div>
+	</body>
+<script type="text/javascript">
+	var d = new Date().getDay();
+	document.body.className = "bg"+d;
+	var t = ['Risk Game, NZ',
+		'Makara Beach, NZ',
+		'Bluff Harbour, NZ',
+		'Ghuznee Beer tag, NZ',
+		'Heyday Desk, NZ',
+		'Home Desktop, NZ',
+		'Wellington Lux Festival, NZ'
+		];
+
+	printText("label", t, d);
+
+
+	function printText(label, t, d) {
+		document.getElementById(label).innerHTML = ' <a class="np" href="javascript:prev()"><</a> <a class="main" href="javascript:next()">' + t[d] + '</a> <a class="np" href="javascript:next()">></a>';
+	}
+	function next() {
+
+		if ((d == 6)) { d=0 } else {  d = d + 1; }
+		printText("label", t, d);
+		document.body.className = "bg"+d;
+	}
+	function prev() {
+		if (d==0) {d = 6} else {  d = d - 1; }
+		printText("label", t, d);
+		document.body.className = "bg"+d;
+	}
+</script>
+</html>
